@@ -32,7 +32,7 @@
       clip-path: polygon(30% 0, 80% 0, 80% 100%, 30% 100%);
     }
 
-    /* 作者信息样式 */
+    /* 作者信息多列布局 */
     .author-box {
       margin: 20px 0;
       padding: 15px;
@@ -40,15 +40,25 @@
       border-left: 4px solid #4285f4;
       font-size: 15px;
       line-height: 1.5;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px 30px;
     }
 
-    .author-box p {
-      margin: 8px 0;
+    .author-box div {
+      margin: 0;
+    }
+
+    .author-box strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 4px;
     }
 
     .author-box a {
       color: #0056b3;
       text-decoration: none;
+      font-size: 14px;
     }
 
     .author-box a:hover {
@@ -97,45 +107,55 @@
                 <h1>DSDNet (ACMMM 2025)</h1>
                 <br>
                 <br>
+
                 <h2>DSDNet: Raw Domain Demoiréing via Dual Color-Space Synergy</h2>
+                <br>
 
                 <!-- 作者信息 -->
                 <div class="author-box">
-                  <p><strong>Qirui Yang</strong><br>
+                  <div>
+                    <strong>Qirui Yang</strong>
                     Tianjin University, Tianjin, China<br>
                     <a href="mailto:yangqirui@tju.edu.cn">yangqirui@tju.edu.cn</a>
-                  </p>
+                  </div>
 
-                  <p><strong>Fangpu Zhang</strong> (Equal contribution)<br>
+                  <div>
+                    <strong>Fangpu Zhang</strong> (Equal contribution)<br>
                     Tianjin University, Tianjin, China<br>
                     <a href="mailto:zhangfp@tju.edu.cn">zhangfp@tju.edu.cn</a>
-                  </p>
+                  </div>
 
-                  <p><strong>Yeying Jin</strong><br>
+                  <div>
+                    <strong>Yeying Jin</strong><br>
                     Tencent, Singapore<br>
                     <a href="mailto:yeyingjin@global.tencent.com">yeyingjin@global.tencent.com</a>
-                  </p>
+                  </div>
 
-                  <p><strong>Qihua Cheng</strong><br>
+                  <div>
+                    <strong>Qihua Cheng</strong><br>
                     Shenzhen Bit Microelectronics Technology Co., Ltd, Shenzhen, China<br>
                     <a href="mailto:chengqihua@microbt.com">chengqihua@microbt.com</a>
-                  </p>
+                  </div>
 
-                  <p><strong>Peng-Tao Jiang</strong><br>
+                  <div>
+                    <strong>Peng-Tao Jiang</strong><br>
                     vivo Mobile Communication Co., Ltd, Hangzhou, China<br>
                     <a href="mailto:pt.jiang@mail.nankai.edu.cn">pt.jiang@mail.nankai.edu.cn</a>
-                  </p>
+                  </div>
 
-                  <p><strong>Huanjing Yue</strong><br>
+                  <div>
+                    <strong>Huanjing Yue</strong><br>
                     Tianjin University, Tianjin, China<br>
                     <a href="mailto:huanjing.yue@tju.edu.cn">huanjing.yue@tju.edu.cn</a>
-                  </p>
+                  </div>
 
-                  <p><strong>Jingyu Yang</strong> (Corresponding author)<br>
+                  <div>
+                    <strong>Jingyu Yang</strong> (Corresponding author)<br>
                     Tianjin University, Tianjin, China<br>
                     <a href="mailto:yjy@tju.edu.cn">yjy@tju.edu.cn</a>
-                  </p>
+                  </div>
                 </div>
+                <br>
                 <!-- /作者信息 -->
 
                 <!-- 摘要框 -->
@@ -147,7 +167,7 @@
                   border-radius: 10px;
                   border: 1px solid #ccc;
                   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-                  font-size: 24px;
+                  font-size: 20px;
                   line-height: 1.6;
                 ">
                   <strong>Abstract:</strong><br>
@@ -1273,6 +1293,7 @@
 </body>
 
 </html>
+
 
 
 
