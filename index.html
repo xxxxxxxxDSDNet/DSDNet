@@ -8,7 +8,6 @@
       outline: none;
     }
 
-
     #zz .splitter_component {
       width: 35vw;
       height: 26vw;
@@ -21,6 +20,39 @@
 
     #zz .example_wrapper.is-1 {
       width: 35vw;
+    }
+
+    .spliter_center {
+      width: 100%;
+      position: absolute;
+      top: 0%;
+      bottom: 0%;
+      left: 0%;
+      right: 0%;
+      clip-path: polygon(30% 0, 80% 0, 80% 100%, 30% 100%);
+    }
+
+    /* 作者信息样式 */
+    .author-box {
+      margin: 20px 0;
+      padding: 15px;
+      background-color: #f3f6fa;
+      border-left: 4px solid #4285f4;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .author-box p {
+      margin: 8px 0;
+    }
+
+    .author-box a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    .author-box a:hover {
+      text-decoration: underline;
     }
   </style>
   <title>DSDNet</title>
@@ -40,7 +72,7 @@
     });
   </script>
   <script type="text/javascript">
-    ! function (o, c) {
+    !function (o, c) {
       var n = c.documentElement,
         t = " w-mod-";
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className +=
@@ -50,17 +82,6 @@
 
   <link href="css/xpixel-logo.png" rel="apple-touch-icon">
   <script defer src="js/splitter.js"> </script>
-  <style>
-    .spliter_center {
-      width: 100%;
-      position: absolute;
-      top: 0%;
-      bottom: 0%;
-      left: 0%;
-      right: 0%;
-      clip-path: polygon(30% 0, 80% 0, 80% 100%, 30% 100%);
-    }
-  </style>
 </head>
 
 <body>
@@ -68,28 +89,68 @@
     <main class="main-wrapper">
 
       <section class="section_example">
-            <div class="padding-section-example">
-              <div class="example_component">
-                <div class="example_info_wrapper">
-                  <div class="example_info_title-wrapper">
+        <div class="padding-section-example">
+          <div class="example_component">
+            <div class="example_info_wrapper">
+              <div class="example_info_title-wrapper">
 
-                    <h1>DSDNet (ACMMM 2025)</h1>
+                <h1>DSDNet (ACMMM 2025)</h1>
+                <br>
+                <br>
+                <h2>DSDNet: Raw Domain Demoiréing via Dual Color-Space Synergy</h2>
 
-                    <h2>DSDNet: Raw Domain Demoiréing via Dual Color-Space Synergy</h2>
+                <!-- 作者信息 -->
+                <div class="author-box">
+                  <p><strong>Qirui Yang</strong><br>
+                    Tianjin University, Tianjin, China<br>
+                    <a href="mailto:yangqirui@tju.edu.cn">yangqirui@tju.edu.cn</a>
+                  </p>
 
-                    <!-- 摘要框 -->
+                  <p><strong>Fangpu Zhang</strong> (Equal contribution)<br>
+                    Tianjin University, Tianjin, China<br>
+                    <a href="mailto:zhangfp@tju.edu.cn">zhangfp@tju.edu.cn</a>
+                  </p>
+
+                  <p><strong>Yeying Jin</strong><br>
+                    Tencent, Singapore<br>
+                    <a href="mailto:yeyingjin@global.tencent.com">yeyingjin@global.tencent.com</a>
+                  </p>
+
+                  <p><strong>Qihua Cheng</strong><br>
+                    Shenzhen Bit Microelectronics Technology Co., Ltd, Shenzhen, China<br>
+                    <a href="mailto:chengqihua@microbt.com">chengqihua@microbt.com</a>
+                  </p>
+
+                  <p><strong>Peng-Tao Jiang</strong><br>
+                    vivo Mobile Communication Co., Ltd, Hangzhou, China<br>
+                    <a href="mailto:pt.jiang@mail.nankai.edu.cn">pt.jiang@mail.nankai.edu.cn</a>
+                  </p>
+
+                  <p><strong>Huanjing Yue</strong><br>
+                    Tianjin University, Tianjin, China<br>
+                    <a href="mailto:huanjing.yue@tju.edu.cn">huanjing.yue@tju.edu.cn</a>
+                  </p>
+
+                  <p><strong>Jingyu Yang</strong> (Corresponding author)<br>
+                    Tianjin University, Tianjin, China<br>
+                    <a href="mailto:yjy@tju.edu.cn">yjy@tju.edu.cn</a>
+                  </p>
+                </div>
+                <!-- /作者信息 -->
+
+                <!-- 摘要框 -->
                 <div style="
-                margin-top: 20px;
-                margin-bottom: 10px;
-                background-color: #f9f9f9;
-                padding: 24px;
-                border-radius: 10px;
-                border: 1px solid #ccc;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-                font-size: 24px;   /* 修改字号 */
-                line-height: 1.6;
-              ">
-                <strong>Abstract:</strong><br>
+                  margin-top: 20px;
+                  margin-bottom: 10px;
+                  background-color: #f9f9f9;
+                  padding: 20px;
+                  border-radius: 10px;
+                  border: 1px solid #ccc;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                  font-size: 24px;
+                  line-height: 1.6;
+                ">
+                  <strong>Abstract:</strong><br>
                   With the rapid advancement of mobile imaging, capturing screens using smartphones has become a prevalent practice in distance learning and conference recording. 
                   However, moiré artifacts, caused by frequency aliasing between display screens and camera sensors, are further amplified by the image signal processing pipeline, leading to severe visual degradation. 
                   Existing sRGB domain demoiréing methods struggle with irreversible information loss, while recent two-stage raw domain approaches suffer from information bottlenecks and inference inefficiency. 
@@ -101,10 +162,10 @@
                 </div>
                 <!-- /摘要框 -->
 
-                  </div>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
       </section>
 
       <!-- 视频演示部分 -->
@@ -112,6 +173,7 @@
         <video src="videos/demo_720p.mp4" autoplay muted loop controls width="60%"></video>
       </div>
       <br><br>
+
 
       <!-- hdr+ 480p -->
       <section class="section_example" id="zz">
@@ -1211,6 +1273,7 @@
 </body>
 
 </html>
+
 
 
 
