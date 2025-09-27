@@ -73,9 +73,35 @@
                 <div class="example_info_wrapper">
                   <div class="example_info_title-wrapper">
 
-                    <h1>DSDNet</h1>
+                    <h1>DSDNet (ACMMM 2025)</h1>
 
-                    <h2>DSDNet: Raw Domain Demoiréing  via Dual Color-Space Synergy</h2>
+                    <h2>DSDNet: Raw Domain Demoiréing via Dual Color-Space Synergy</h2>
+
+                    <!-- 摘要框 -->
+                <div style="
+                  margin-top: 20px;
+                  margin-bottom: 10px;
+                  background-color: #f9f9f9;
+                  padding: 20px;
+                  border-radius: 10px;
+                  border: 1px solid #ccc;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                  font-size: 16px;
+                  line-height: 1.6;
+                ">
+                  <strong>Abstract:</strong><br>
+                With the rapid advancement of mobile imaging, capturing screens using smartphones has become a prevalent practice in distance learning and conference recording. 
+                  However, moiré artifacts, caused by frequency aliasing between display screens and camera sensors, are further amplified by the image signal processing pipeline, leading to severe visual degradation. 
+                  Existing sRGB domain demoiréing methods struggle with irreversible information loss, while recent two-stage raw domain approaches suffer from information bottlenecks and inference inefficiency. 
+                  To address these limitations, we propose a single-stage raw domain demoiréing framework, Dual-Stream Demoiréing Network (DSDNet), which leverages the synergy of raw and YCbCr images to remove moiré while preserving luminance and color fidelity. 
+                  Specifically, to guide luminance correction and moiré removal, we design a raw-to-YCbCr mapping pipeline and introduce the Synergic Attention with Dynamic Modulation (SADM) module. 
+                  This module enriches the raw-to-sRGB conversion with cross-domain contextual features. 
+                  Furthermore, to better guide color fidelity, we develop a Luminance-Chrominance Adaptive Transformer (LCAT), which decouples luminance and chrominance representations. 
+                  Extensive experiments demonstrate that DSDNet outperforms state-of-the-art methods in both visual quality and quantitative evaluation and achieves an inference speed 2.4x faster than the second-best method, highlighting its practical advantages. 
+                </div>
+                <!-- /摘要框 -->
+
+                    
                   </div>
                 </div>
               </div>
@@ -1180,3 +1206,4 @@
 </body>
 
 </html>
+
